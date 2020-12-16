@@ -74,6 +74,7 @@ class AlienInvasion:
             self.stats.game_active = True
             self.sb.prep_score()
             self.sb.prep_level()
+            self.sb.prep_ships()
 
             # 清空余下的外星人和子弹
             self.aliens.empty()
@@ -219,6 +220,7 @@ class AlienInvasion:
         if self.stats.ships_left > 0:
             # 将ships_left减1
             self.stats.ships_left -= 1
+            self.sb.prep_ships()
 
             # 清空余下的外星人和子弹
             self.aliens.empty()
